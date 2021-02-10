@@ -1,0 +1,47 @@
+<html>
+<head>
+    <!--
+    This is the library that provides websocket streaming pub/sub
+    The dev serverver is serving the html and javascript, but it also provides updating fx data on /fx/prices.
+     -->
+     <style>
+       #currency-pair td {
+          padding:20px;
+      }
+      #currency-pair th {
+        text-align: center;
+        padding:10px;
+        color: white;
+        background-color: #34495E;
+      }
+      caption {
+        background: #dbb768;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      p {
+       text-align: center;
+      }
+     </style>
+    <script src="stomp.js"></script>
+    <script src="sparkline.js"></script>
+</head>
+<body>
+    <section class="content">
+        <p>
+          <h1>Code is written in Javascript</h1>
+            <h3>
+                Note About Table:: Each entry in the following table showing unique currency pairs with latest values and 
+                the table is sorted based on lastChangeBid in desc. The sparkline is showing for the latest
+                30 records(max).
+            </h3>
+        </p>
+  </section>
+  <table id="currency-pair">
+      <caption style="padding: 10">Currency Matrix</caption><tr><th>name</th><th>bestBid</th><th>bestAsk</th><th>openBid</th><th>openAsk</th><th>lastChangeAsk</th><th>lastChangeBid</th><th>sparkline</th></tr>
+  </table>
+<script src="bundle.js"></script>
+
+
+</body>
+</html>
